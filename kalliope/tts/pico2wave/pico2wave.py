@@ -59,7 +59,7 @@ class Pico2wave(TTSModule):
         final_command = list()
         final_command.extend([self.path])
         final_command.extend(pico2wave_options)
-        final_command.append(self.words)
+        final_command.append(self.words.encode("utf-8"))
 
         logger.debug("[Pico2wave] command: %s" % final_command)
 
